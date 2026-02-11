@@ -1,8 +1,12 @@
 {
-  "name": "web",
+  "name": "clear",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "next dev --port 3000",
     "build": "next build",
@@ -11,6 +15,7 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@prisma/client": "^7.4.0",
     "@repo/ui": "*",
     "next": "16.1.0",
     "react": "^19.2.0",
@@ -22,7 +27,9 @@
     "@types/node": "^22.15.3",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
+    "dotenv": "^16.0.3",
     "eslint": "^9.39.1",
+    "prisma": "^7.4.0",
     "typescript": "5.9.2"
   }
 }

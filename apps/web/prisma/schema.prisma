@@ -12,3 +12,23 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model User {
+  id String @id @default(cuid()) 
+  email String @unique
+  first_name String
+  last_name String
+  password String 
+  songs Song[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt()
+}
+
+model Song {
+  id   String @id @default(cuid())
+  userId String
+  music_name String
+  composer String
+  duration String
+  songs User @relation(fields: [userId], references: [id])
+}
